@@ -1,545 +1,710 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="Demon.css" href="demon2.js" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
 
-    <style>
-      * {
-        box-sizing: border-box;
-      }
+<head>
+  <link rel="stylesheet" href="Demon.css" href="demon2.js" href="spinner.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      body {
-        margin: 0;
-        font-family: Arial;
-        font-size: 17px;
-      }
 
-      #myVideo {
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-      }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      .content {
-        bottom: 0;
-        background: rgb(205, 7, 7);
-        color: #f1f1f1;
-        width: 100%;
-        padding: 20px;
-      }
+    body {
+      margin: 0;
+      font-family: Arial;
+      font-size: 17px;
+    }
 
-      #myBtn {
-        width: 200px;
-        font-size: 18px;
-        padding: 10px;
-        border: none;
-        background: #000;
-        color: #fff;
-        cursor: pointer;
-      }
+    #myVideo {
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
 
-      #myBtn:hover {
-        background: black;
-        color: rgb(205, 7, 7);
-      }
-    </style>
-  </head>
- <div>
-  <p
-  id="play"
-  style="
+    .content {
+      bottom: 0;
+      background-color: none;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+    }
+
+    #myBtn {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    #myBtn:hover {
+      background: black;
+      color: rgb(205, 7, 7);
+    }
+  </style>
+  <style>
+    ::-moz-selection {
+      color: red;
+      background: rgb(0, 0, 0);
+    }
+
+    ::selection {
+      color: red;
+      background: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<div>
+  <p id="play" style="
     color: black;
     cursor: pointer;
     position: fixed;
     left: 200;
     top: 200;
-  "
-  onclick="togPlay()"
->
-  <i class="fa-solid fa-play"></i>
-</p>
-  <audio
-  id="aud"
-  src="Demon_Slayer_-_Opening_1_4K_60F_(getmp3.pro).mp3"
-  loop
-  autoplay="autoplay"
-></audio>
+  " onclick="togPlay()">
+    <i class="fa-solid fa-play"></i>
+  </p>
+  <audio id="aud" src="Demon_Slayer_-_Opening_1_4K_60F_(getmp3.pro).mp3" loop autoplay="autoplay"></audio>
 
-<script>
-  aud.autoplay = false;
-  function togPlay() {
-    if (aud.autoplay) {
-      aud.autoplay = false;
-      aud.load();
-      play.innerHTML = '<i class="fa-solid fa-play"></i>';
-    } else {
-      aud.autoplay = true;
-      aud.load();
-      play.innerHTML = '<i class="fa-solid fa-pause"></i>';
-    }
-  }
-</script>
-
-</div>
-  <video width="1080px" poster="" id="vid" loop>
-    <source
-      src="Demon Slayer_ Kimetsu no Yaiba Trailer 1.html.mp4"
-      type="video/mp4"
-      id="vid"
-    />
-  </video>
-
-  <div class="content">
-    <h1>鬼滅 の刃</h1>
-    <p>
-      Demon Slayer: Kimetsu no Yaiba (鬼滅の刃, Kimetsu no Yaiba, "Blade of
-      Demon Destruction") is a Japanese manga series written and illustrated by
-      Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become
-      a demon slayer after his family was slaughtered and his younger sister,
-      Nezuko, turned into a demon..
-    </p>
-
-    <button id="myBtn" onclick="myFunction()">Play</button>
-    <button id="myBtn" onclick="myFunction()">Pause</button>
-  </div>
 
   <script>
-    var video = document.getElementById("vid");
-
-    function myFunction() {
-      if (video.paused) {
-        video.play();
-        btn.innerHTML = "Pause";
+    aud.autoplay = false;
+    function togPlay() {
+      if (aud.autoplay) {
+        aud.autoplay = false;
+        aud.load();
+        play.innerHTML = '<i class="fa-solid fa-play"></i>';
       } else {
-        video.pause();
-        btn.innerHTML = "Play";
+        aud.autoplay = true;
+        aud.load();
+        play.innerHTML = '<i class="fa-solid fa-pause"></i>';
       }
     }
   </script>
 
-  <style>
-    /* width */
-    ::-webkit-scrollbar {
-      width: 20px;
+</div>
+<video width="1080px" poster="" id="vid" loop>
+  <source src="Demon Slayer_ Kimetsu no Yaiba Trailer 1.html.mp4" type="video/mp4" id="vid" />
+</video>
+
+<div class="content">
+
+
+
+  <button id="myBtn" onclick="myFunction()">Play</button>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+  var video = document.getElementById("vid");
+
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
     }
+  }
+</script>
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px grey;
-      border-radius: 10px;
-    }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background: rgb(213, 3, 3);
-      border-radius: 10px;
-    }
+<style>
+  /* width */
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: white;
-    }
-  </style>
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
 
-  <ul style="display: flex; overflow-y: hidden auto; overflow-x: auto" >
-    <a
-      href="Demon Slayer  [call Me By you name] Tanjiro - WhatsApp Status - DARK.mp4"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT2b_ZgJuR8ueBZdtZhDu_Ani-SICr_eE0wg&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(213, 3, 3);
+    border-radius: 10px;
+  }
 
-    <a
-      href="Zenitsu Vs Spider Demon _ Demon Slayer _ English Dub.html1.html.mp4"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kpMHk7C03RdDoB5W0Q_2HJ47LFiFi02QTg&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+</style>
 
-    <a
-      href="Hashibira Inosuke funniest moments in Demon Slayer _ Demon Slayer Season 1 and 2.html.mp4"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUjmiquSwF2ainCVNzdbgJitMwSuhMKlIrug&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+<ul style="display: flex; overflow-y: hidden auto; overflow-x: auto">
+  <a href="Demon Slayer  [call Me By you name] Tanjiro - WhatsApp Status - DARK.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT2b_ZgJuR8ueBZdtZhDu_Ani-SICr_eE0wg&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a href="Smooth anime transitions EDIT __ Demon Slayer__Jujutsu Kaisen.mp4">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyDjU37uFnRl-8XWtkJd2YXCVKkB-fYfBgoA&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  <a href="Zenitsu Vs Spider Demon _ Demon Slayer _ English Dub.html1.html.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kpMHk7C03RdDoB5W0Q_2HJ47LFiFi02QTg&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a
-      href="Demon Slayer edit 4K _ Uzui Tengen and Tanjiro Kamado VS Gyutaro.mp4"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4M_4Pyn_jaWTmAPt9cgJ7fXP9TNZGp8-jvg&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  <a href="Hashibira Inosuke funniest moments in Demon Slayer _ Demon Slayer Season 1 and 2.html.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUjmiquSwF2ainCVNzdbgJitMwSuhMKlIrug&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a href="tanjiro kamado badass fighting moments.mp4">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJeRteDZ3f1hQGd1OAs-vZOa1gmBd9u9pCw&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  <a href="Smooth anime transitions EDIT __ Demon Slayer__Jujutsu Kaisen.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyDjU37uFnRl-8XWtkJd2YXCVKkB-fYfBgoA&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a href="Tanjiro Vs Rui - Full Fight Scene _ Demon Slayer (CLIP 4K).mp4">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePZIdY9WsY_1psFSIvdZh3c0f68avV-1uHg&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  <a href="Demon Slayer edit 4K _ Uzui Tengen and Tanjiro Kamado VS Gyutaro.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4M_4Pyn_jaWTmAPt9cgJ7fXP9TNZGp8-jvg&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a
-      href="Tanjiro's Hinokami Kagura Dance Breathing Technique - Demon Slayer Episode 19.mp4"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhNoR-oROLvmuPlC4I4jYaZPzn_zMFPT9Iw&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
+  <a href="tanjiro kamado badass fighting moments.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBJeRteDZ3f1hQGd1OAs-vZOa1gmBd9u9pCw&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    <a
-      href="file:///C:/Users/Burhan/Desktop/Demon%20Slayer/Demon%20Slayer.html"
-    >
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEm9_71epm8c0LMdt-VJcOfNabYRAuM7fCfQ&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
-    <a href=""
-      ><img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuIqVctkedyHFt7dPErdIHNj7V3cCQw25kYQ&usqp=CAU"
-        alt="HTML tutorial"
-    /></a>
-  </ul>
+  <a href="Tanjiro Vs Rui - Full Fight Scene _ Demon Slayer (CLIP 4K).mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRePZIdY9WsY_1psFSIvdZh3c0f68avV-1uHg&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-  <style>
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-    }
+  <a href="Tanjiro's Hinokami Kagura Dance Breathing Technique - Demon Slayer Episode 19.mp4">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKhNoR-oROLvmuPlC4I4jYaZPzn_zMFPT9Iw&usqp=CAU"
+      alt="HTML tutorial" /></a>
 
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      color: #fff;
-      border-radius: 6px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 100%;
-      left: 50%;
-      margin-left: -60px;
+  <a href="file:///C:/Users/Burhan/Desktop/Demon%20Slayer/Demon%20Slayer.html">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEm9_71epm8c0LMdt-VJcOfNabYRAuM7fCfQ&usqp=CAU"
+      alt="HTML tutorial" /></a>
+  <a href=""><img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuIqVctkedyHFt7dPErdIHNj7V3cCQw25kYQ&usqp=CAU"
+      alt="HTML tutorial" /></a>
+</ul>
 
-      /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-      opacity: 0;
-      transition: opacity 1s;
-    }
+<style>
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
 
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
-    <br><br><br>
-  <body
-    style="
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<body style="
       text-align: center;
       background-color: #f5f1f1;
       background-image: url(https://media2.giphy.com/media/1QiMXaDe9cKFlL0T1d/giphy.gif?cid=ecf05e47v207zq9ftxwvk2q88nzp5eleek5bozxp1cdjq7ea&rid=giphy.gif&ct=g);
       background-repeat: no-repeat;
+      display: flex;
+  flex-wrap: wrap;
       background-attachment: fixed;
       background-size: 100%;
       font-family: 'Caveat', cursive; 
       color: rgb(0, 0, 0);
-    "
-  >
-    <div >
-      <h1><div
-        style="font-size: 60px;color: red;
-        " 
-        class="tooltip"> 
-          Tanjiro🌊🔥,
-          <span class="tooltiptext">
-            <video style=" transform: translate(-50%, -50%);
+    ">
+  <div>
+    <h1>
+      <div style="font-size: 60px;color: red;
+        " class="tooltip">
+        Tanjiro🌊🔥,
+        <span class="tooltiptext">
+          <video style=" transform: translate(-50%, -50%);
              position: absolute;
-           "
-          
-            
-              height="240"
-              width="360"
-              src="Demon Slayer  [call Me By you name] Tanjiro - WhatsApp Status - DARK.mp4"
-              autoplay
-              muted
-              loop
-              controls
-            ></video>
-          </span>
-        </div>
-        <div
-        style="font-size: 60px;color: red"
-        class="tooltip">
-        Zenitsu⚡⚡,
-          <span class="tooltiptext">
-            <video style="transform: translate(-50%, -50%);
-             position: absolute;
-            "
-          
-            
-              height="240"
-              width="360"
-              src="Zenitsu Vs Spider Demon _ Demon Slayer _ English Dub.html1.html.mp4"
-              autoplay
-              muted
-              loop
-              controls
-            ></video>
-          </span>
-        </div>
-        <div
-        style="font-size: 60px;color: red"
-        class="tooltip">
-        Inosuke🐗🐗.
-          <span class="tooltiptext">
-            <video style="transform: translate(-50%, -50%);
-            position: absolute;"          
-            
-              height="240"
-              width="360"
-              src="Hashibira Inosuke funniest moments in Demon Slayer _ Demon Slayer Season 1 and 2.html.mp4"
-              autoplay
-              muted
-              loop
-              controls
-            ></video>
-          </span>
-        </div>
-        </div>
+           " height="240" width="360" src="Demon Slayer  [call Me By you name] Tanjiro - WhatsApp Status - DARK.mp4"
+            autoplay muted loop controls></video>
+        </span>
       </div>
-    
-    </h1>
-      
+      <div style="font-size: 60px;color: red" class="tooltip">
+        Zenitsu⚡⚡,
+        <span class="tooltiptext">
+          <video style="transform: translate(-50%, -50%);
+             position: absolute;
+            " height="240" width="360" src="Zenitsu Vs Spider Demon _ Demon Slayer _ English Dub.html1.html.mp4"
+            autoplay muted loop controls></video>
+        </span>
+      </div>
+      <div style="font-size: 60px;color: red" class="tooltip">
+        Inosuke🐗🐗.
+        <span class="tooltiptext">
+          <video style="transform: translate(-50%, -50%);
+            position: absolute;" height="240" width="360"
+            src="Hashibira Inosuke funniest moments in Demon Slayer _ Demon Slayer Season 1 and 2.html.mp4" autoplay
+            muted loop controls></video>
+        </span>
+      </div>
+  </div>
+  </div>
 
-      
-  </body>
-  
-  <br><br><br><br>
-  
-  
-    <div 
-    style="font-family:cursive;
-    color: #000;"
-    class="container">
-        <div class="cards">
-           
-        <div class="card">
-                <div class="colour"></div>
-                <div class="card-text">
-                    <h5>Tanjiro</h5>
-                    <p style="font-size: 10px;" >Tanjiro Kamado (竈門 炭治郎) is the main protagonist of the prominent
-                      anime/manga series, Demon Slayer: Kimetsu no Yaiba. He is also the older
-                      brother of Nezuko Kamado and is the oldest child of the Kamado family. He
-                      is a Kanoe ranked Demon Slayer and a member of the Demon Slayer Corps.</p>
-                </div>
-                <div class="colour-bottom"></div>
-            </div>
-            <div class="card zenitsu">
-                <div class="colour"></div>
-                <div class="card-text">
-                    <h5>Zenitsu</h5>
-                    <p style="font-size: 10px;" > Zenitsu was not raised by his parents so he did not have any
-                    proper guidance. When he was young, Zenitsu fell in love with a girl and
-                    decided to give her money to appeal to her, however the girl ended up
-                    running away with another guy leaving Zenitsu drowning in debt. </p>
-                </div>
-                <div class="colour-bottom"></div>
-            </div>
-            <div class="card inosuke">
-              <div class="colour"></div>
-              <div class="card-text">
-                  <h5>Inosuke</h5>
-                  <p style="font-size: 10px;" >Inosuke was raised by boars for most of his life before the Final
-                    Selection. It was revealed later that he was born into a family with an
-                    abusive father and escaped from his father with his mother.</p>
-              </div>
-              <div class="colour-bottom"></div>
-          </div>
-        </div></div>
+  </h1>
+
+
+
+
+
+
+
+
+  <div style="font-family:cursive;
+    color: #000;height: fit-content;" class="container">
+
+
+    <div class="card">
+      <div class="colour"></div>
+      <div class="card-text">
+        <h5>Tanjiro</h5>
+        <p style="font-size: 10px;">Tanjiro Kamado (竈門 炭治郎) is the main protagonist of the prominent
+          anime/manga series, Demon Slayer: Kimetsu no Yaiba. He is also the older
+          brother of Nezuko Kamado and is the oldest child of the Kamado family. He
+          is a Kanoe ranked Demon Slayer and a member of the Demon Slayer Corps.</p>
+      </div>
+      <div class="colour-bottom"></div>
     </div>
+    <div class="card zenitsu">
+      <div class="colour"></div>
+      <div class="card-text">
+        <h5>Zenitsu</h5>
+        <p style="font-size: 10px;"> Zenitsu was not raised by his parents so he did not have any
+          proper guidance. When he was young, Zenitsu fell in love with a girl and
+          decided to give her money to appeal to her, however the girl ended up
+          running away with another guy leaving Zenitsu drowning in debt. </p>
+      </div>
+      <div class="colour-bottom"></div>
     </div>
+    <div class="card inosuke">
+      <div class="colour"></div>
+      <div class="card-text">
+        <h5>Inosuke</h5>
+        <p style="font-size: 10px;">Inosuke was raised by boars for most of his life before the Final
+          Selection. It was revealed later that he was born into a family with an
+          abusive father and escaped from his father with his mother.</p>
+      </div>
+      <div class="colour-bottom"></div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div></div>
-<div  style="
-color: #000;"  >
+  
+
+  
     <div style="color: black;" class="card hashiras">
       <div class="colour"></div>
       <div class="card-text">
-      <h5>Hashira</h5>
-      <p style="font-size: 10px;" >The Hashira are all assigned a specific region that they are required to patrol, usually to gather information about the demons inhabiting the said area and to improve their swordsmanship. They are also deployed on missions only if members of lower ranks are unable to complete it.</p></div></div></div><br><br>
-      <div>
-      <div style="color: black;" class="card kanaeKocho">
-        <div class="colour"></div>
-        <div class="card-text"><h5> 10/10 kanae Kocho, The (Former) Insect Hashira 🦋</h5>
-          <p style="font-size: 10px;" >Just like Shinjuro, a not is known about Kanae's time as the Insect
-            Hashira. However, it's a given that she was extremely powerful, since
-            everyone holds her in high regard to this day. The fact that Doma killed
-            her is going to be a source of great anger for both Shinobu and Kanao.
-            Only time will tell how both warriors will deal with this battle, once
-            they come face to face with this upper rank demon.</p></div></div></div><br><br>
+        <h5>Hashira</h5>
+        <p style="font-size: 10px;">The Hashira are all assigned a specific region that they are required to patrol,
+          usually to gather information about the demons inhabiting the said area and to improve their swordsmanship.
+          They are also deployed on missions only if members of lower ranks are unable to complete it.</p>
+      </div>
+      <div class="colour-bottom"></div>
+    </div>
+  
+  
+    <div style="color: black;" class="card kanaeKocho">
+      <div class="colour"></div>
+      <div class="card-text">
+        <h5> 10/10 kanae Kocho, The (Former) Insect Hashira 🦋</h5>
+        <p style="font-size: 10px;">Just like Shinjuro, a not is known about Kanae's time as the Insect
+          Hashira. However, it's a given that she was extremely powerful, since
+          everyone holds her in high regard to this day. The fact that Doma killed
+          her is going to be a source of great anger for both Shinobu and Kanao.
+          Only time will tell how both warriors will deal with this battle, once
+          they come face to face with this upper rank demon.</p>
+      </div>
+      <div class="colour-bottom"></div>
+    </div>
+  
 
-<div>
-          <div style="color: black;" class="card Tengenuzui">
+  
+    <div style="color: black;" class="card Tengenuzui">
       <div class="colour "></div>
-      <div class="card-text"><h5> 9/10 Tengen Uzui, The Sound Hashira 🎼</h5>
-        <p style="font-size: 10px;" > The Sound Hashira might have a cool character design, but his power isn't
+      <div class="card-text">
+        <h5> 9/10 Tengen Uzui, The Sound Hashira 🎼</h5>
+        <p style="font-size: 10px;"> The Sound Hashira might have a cool character design, but his power isn't
           really anything noteworthy. This is especially true when compared to some
           of the other Hashira in Demon Slayer who boast truly impressive powers. As
           a result, Tengen Uzui has to deal with the moniker of being the least
           powerful Hashira around. Of course, that's not the worst thing in the
           world, as all Hashira are strong. He's still incredibly powerful and can
-          give any demon a run for their money.</p></div></div></div><br><br>
+          give any demon a run for their money.</p>
+      </div>
+      <div class="colour-bottom"></div>
+    </div>
+  
 
-        <div style="color: black;" class="card Rengoku">
-      <div class="colour"></div>
-      <div class="card-text"><h5>8/10 Kyojuro Rengoku, The Flame Hashira 🔥🔥</h5>
-        <p style="font-size: 10px;" > Rengoku is easily one of the most lovable Hashira in the series. This is
-          why it's a shame that he succumbed to the wounds that he suffered in his
-          fight against Akaza. Regardless, the strength that he showed in this
-          encounter was still incredible to behold. In fact, he could've actually
-          defeated Akaza had he not been exhausted after saving everyone on the
-          Mugen Train.</p></div></div></div><br><br>
-
-
-        <div style="color: black;" class="card Shinobu">
-      <div class="colour"></div>
-      <div class="card-text"><h5>7/10 Shinobu Kocho, The Insect Hashira 🐞</h5>
-        <p style="font-size: 10px;" > Shinobu Kocho is an effective Hashira whose worthy of being the Insect
-          Hashira. That being said, one has to admit that she's arguably the weakest
-          Hashira when it comes to pure strength.</p></div></div></div><br><br>
-
-
-        <div style="color: black;" class="card Obanai">
-      <div class="colour"></div>
-      <div class="card-text"><h5>6/10 Obanai Iguro, The Serpent Hashira 🐍</h5>
-        <p style="font-size: 10px;" > The Serpent Hashira hasn't really got the time to shine in the anime.
-          However, manga readers know precisely how much power Obanai Iguro houses.
-          He's easily one of the strongest members of the Hashira and can hold his
-          own in a fight against the toughest demons around. One can only wait and
-          see how the anime will do justice and display the massive strength of this
-          character.
-        </p></div></div><br><br>
+  <div style="color: black;" class="card Rengoku">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>8/10 Kyojuro Rengoku, The Flame Hashira 🔥🔥</h5>
+      <p style="font-size: 10px;"> Rengoku is easily one of the most lovable Hashira in the series. This is
+        why it's a shame that he succumbed to the wounds that he suffered in his
+        fight against Akaza. Regardless, the strength that he showed in this
+        encounter was still incredible to behold. In fact, he could've actually
+        defeated Akaza had he not been exhausted after saving everyone on the
+        Mugen Train.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
+  
 
 
-        <div style="color: black;" class="card MitsuriKanroji">
-      <div class="colour"></div>
-      <div class="card-text"><h5>5/10 Mitsuri Kanroji, The Love Hashira 💖</h5>
-        <p style="font-size: 10px;" >At a glance, the Love Hashira doesn't really look like a fighter who
-          boasts a ton of raw strength. However, looks can be very deceptive —
-          Mitsuru Kanroji actually boasts one of the highest raw strength levels in
-          the Hashira. Most viewers who are underrating the abilities of this
-          Hashira will be in for a rude awakening when Mitsuri shows precisely how
-          much power she houses in her body. After all, no mere mortal would be able
-          to rip out Muzan's tentacles with ease.</p></div></div><br><br>
+  <div style="color: black;" class="card Shinobu">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>7/10 Shinobu Kocho, The Insect Hashira 🐞</h5>
+      <p style="font-size: 10px;"> Shinobu Kocho is an effective Hashira whose worthy of being the Insect
+        Hashira. That being said, one has to admit that she's arguably the weakest
+        Hashira when it comes to pure strength.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
+  </div>
 
 
+  <div style="color: black;" class="card Obanai">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>6/10 Obanai Iguro, The Serpent Hashira 🐍</h5>
+      <p style="font-size: 10px;"> The Serpent Hashira hasn't really got the time to shine in the anime.
+        However, manga readers know precisely how much power Obanai Iguro houses.
+        He's easily one of the strongest members of the Hashira and can hold his
+        own in a fight against the toughest demons around. One can only wait and
+        see how the anime will do justice and display the massive strength of this
+        character.
+      </p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
-        <div style="color: black;" class="card MuichiroTokito">
-      <div class="colour"></div>
-      <div class="card-text"><h5>4/10 Muichiro Tokito, The Mist Hashira 🌁</h5>
-        <p style="font-size: 10px;" >Muichiro is another Hashira whose true potential is yet to be seen in the
-          anime. That being said, manga readers aren't worried — given his immense
-          power, it won't take that long for the Mist Hashira to carve out a stellar
-          reputation amongst the fanbase.</p></div></div><br><br>
 
-
-
-        <div style="color: black;" class="card GiyuTomioka">
-      <div class="colour"></div>
-      <div class="card-text"><h5>3/10 Giyu Tomioka, The Water Hashira 🌊🌊</h5>
-        <p style="font-size: 10px;" >Out of all the Hashira present in Demon Slayer, Giyu Tomioka has had the
-          most valuable screentime in the anime as of now. His powers were a treat
-          to behold, and the manner in which he was able to make short work of Rui
-          made it extremely clear that the high-level Hashira were a force to be
-          reckoned with. Given Tanjiro's talents with Water Breathing, one can
-          certainly expect him to spend a ton of time with Giyu Tomioka as he
-          strives to improve his swordsmanship. Of course, Tanjiro's real ace in the
-          hole is Hinokami Kagura, and one can only wait and see how this Sun
-          Breathing develops over the course of the anime.</p></div></div><br><br>
+  <div style="color: black;" class="card MitsuriKanroji">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>5/10 Mitsuri Kanroji, The Love Hashira 💖</h5>
+      <p style="font-size: 10px;">At a glance, the Love Hashira doesn't really look like a fighter who
+        boasts a ton of raw strength. However, looks can be very deceptive —
+        Mitsuru Kanroji actually boasts one of the highest raw strength levels in
+        the Hashira. Most viewers who are underrating the abilities of this
+        Hashira will be in for a rude awakening when Mitsuri shows precisely how
+        much power she houses in her body. After all, no mere mortal would be able
+        to rip out Muzan's tentacles with ease.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
 
 
-        <div style="color: black;" class="card SanemiShinazugawa">
-      <div class="colour"></div>
-      <div class="card-text"><h5>2/10 Sanemi Shinazugawa, The Wind Hashira 💨</h5>
-        <p style="font-size: 10px;" >Like most of the Hashira in the series, most anime viewers don't really
-          know a ton about Sanemi Shinazugawa. However, his wild look and demeanor
-          should be indicative enough of just how powerful this Hashira really
-          is.This ferocity, coupled with the cutting nature of his Wind Breathing,
-          should make it infinitely clear that Sanemi has a ton of tricks up his
-          sleeve. Hopefully, the anime will give this ferocious fighter the
-          spotlight he deserves.</p></div></div><br><br>
+  <div style="color: black;" class="card MuichiroTokito">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>4/10 Muichiro Tokito, The Mist Hashira 🌁</h5>
+      <p style="font-size: 10px;">Muichiro is another Hashira whose true potential is yet to be seen in the
+        anime. That being said, manga readers aren't worried — given his immense
+        power, it won't take that long for the Mist Hashira to carve out a stellar
+        reputation amongst the fanbase.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
 
 
-
-        <div style="color: black;" class="card GyomeiHimejima">
-      <div class="colour"></div>
-      <div class="card-text"><h5>1/10 Gyomei Himejima, The Stone Hashira 🪨</h5>
-        <p style="font-size: 10px;" >At a glance, Gyomei Himejima might not seem like all that powerful a
-          fighter. The fact that he carries the unimpressive title of being the
-          Stone Hashira means that most people won't really take him all that
-          seriously either. However, these people are bound to be surprised when
-          they find out that Gyomei is actually the strongest Hashira in the entire
-          group. Suffice to say, his destructive power will be an absolute treat to
-          witness in the series.</p></div></div><br><br><br>
-
-
-<br><br>
-
- <div>    <div>  <div style="color: black;" class="card muzan">
-      <div class="colour"></div>
-      <div class="card-text"><h5>#1 DEMON MUZAN 👿👿</h5>
-        <p style="font-size: 10px;" > He is the Demon King, the first of his kind, as well as the progenitor of
-          all other demons in existence. Muzan is also the leader of the Twelve
-          Kizuki, an organization of the twelve strongest demons in existence that
-          serve directly under him.</p></div></div><br><br></div> </div>
+  <div style="color: black;" class="card GiyuTomioka">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>3/10 Giyu Tomioka, The Water Hashira 🌊🌊</h5>
+      <p style="font-size: 10px;">Out of all the Hashira present in Demon Slayer, Giyu Tomioka has had the
+        most valuable screentime in the anime as of now. His powers were a treat
+        to behold, and the manner in which he was able to make short work of Rui
+        made it extremely clear that the high-level Hashira were a force to be
+        reckoned with. Given Tanjiro's talents with Water Breathing, one can
+        certainly expect him to spend a ton of time with Giyu Tomioka as he
+        strives to improve his swordsmanship. Of course, Tanjiro's real ace in the
+        hole is Hinokami Kagura, and one can only wait and see how this Sun
+        Breathing develops over the course of the anime.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
 
-          <div>
-          <div style="color: black;" class="card Tengenuzui2">
-            <div class="card-text">
-           <p style="font-size: 10px;"><video style="transform: translate(-50%, -50%);
-            position: absolute;top: 60px;"          
-            
-              height="240"
-              width="360"
-              src="Demon Slayer edit 4K _ Uzui Tengen and Tanjiro Kamado VS Gyutaro.mp4"
-              autoplay
-              muted
-              loop
-              ></video></p>
-        
-            <div class="card-text"></div></div></div></div>
+
+  <div style="color: black;" class="card SanemiShinazugawa">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>2/10 Sanemi Shinazugawa, The Wind Hashira 💨</h5>
+      <p style="font-size: 10px;">Like most of the Hashira in the series, most anime viewers don't really
+        know a ton about Sanemi Shinazugawa. However, his wild look and demeanor
+        should be indicative enough of just how powerful this Hashira really
+        is.This ferocity, coupled with the cutting nature of his Wind Breathing,
+        should make it infinitely clear that Sanemi has a ton of tricks up his
+        sleeve. Hopefully, the anime will give this ferocious fighter the
+        spotlight he deserves.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
 
 
 
+  <div style="color: black;" class="card GyomeiHimejima">
+    <div class="colour"></div>
+    <div class="card-text">
+      <h5>1/10 Gyomei Himejima, The Stone Hashira 🪨</h5>
+      <p style="font-size: 10px;">At a glance, Gyomei Himejima might not seem like all that powerful a
+        fighter. The fact that he carries the unimpressive title of being the
+        Stone Hashira means that most people won't really take him all that
+        seriously either. However, these people are bound to be surprised when
+        they find out that Gyomei is actually the strongest Hashira in the entire
+        group. Suffice to say, his destructive power will be an absolute treat to
+        witness in the series.</p>
+    </div>
+    <div class="colour-bottom"></div>
+  </div>
 
-</div>
-      </div></div></div>
 
+
+
+  <div>
+    <div>
+      <div style="color: black;" class="card muzan">
+        <div class="colour"></div>
+        <div class="card-text">
+          <h5>#1 DEMON MUZAN 👿👿</h5>
+          <p style="font-size: 10px;"> He is the Demon King, the first of his kind, as well as the progenitor of
+            all other demons in existence. Muzan is also the leader of the Twelve
+            Kizuki, an organization of the twelve strongest demons in existence that
+            serve directly under him.</p>
+        </div>
+        <div class="colour-bottom"></div>
       </div>
     </div>
+  </div>
+</div>
+
+  <div>
+    <div style="color: black;" class="card Tengenuzui2">
+      <div class="card-text">
+        <p style="font-size: 10px;"><video style="transform: translate(-50%, -50%);
+            position: absolute;top: 60px;" height="240" width="360"
+            src="Demon Slayer edit 4K _ Uzui Tengen and Tanjiro Kamado VS Gyutaro.mp4" autoplay muted loop></video></p>
+
+        <div class="card-text"></div>
+      </div>
     </div>
-    
-    
+  </div>
+
+
+
+
+
+  
+  
+  </div>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: #04AA6D;
+      color: white;
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  </style>
+  </head>
+
+
+  </div>
+
+  <div>
+
+    <button style=" background: black;position: relative; top: 0px;left: 525px;
+        color: rgb(205, 7, 7);height: 55px;width: 150px;text-size-adjust: 43px;" onclick="typeWriter()">
+      <p style="color:red;"> 鬼滅の刃</p>
+    </button>
+
+    <p style="color: white;" id="demo"></p>
+
+
+    <button style=" background: black;font-size: 25px;text-align: center;position: relative;left: 525px;
+        color: rgb(205, 7, 7);height: 450px;width: 640px;text-size-adjust: 43px;" id="hover" class="glow-on-hover"
+      type="button" onclick="myfunction()">
+      <h3 style="font-size: 60px;text-align: center;">鬼滅の刃</h3>
+    </button>
+    <p style="color: white;" id="hover"></p>
+
+    <script style="text-align: center;">
+      var i = 0;
+      var txt = "Demon Slayer Season 3 will start with Tanjiro traveling to the Swordsmith Village to replace his sword because Hotaru Haganezuka is tired of repairing it. He has to explain the smith who made it and how his sword was so badly damaged. While Tanjiro waits for his sword to be repaired, enemies close in."
+      var speed = 35;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("hover").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+  </div>
+
+  <hr>
+  <div><video id="season3" style="width: 1280px;position: relative;left: 0px;right:0;"
+      src="DEMON SLAYER SEASON 3 - OFFICIAL TRAILER.mp4" loop controls></video></div>
+  <p style=" font-family: 'Caveat', cursive;font-size: 20px;">Demon Slayer: Kimetsu no Yaiba 鬼滅の刃, Kimetsu no Yaiba,
+    Blade of Demon Destruction is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows
+    teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger
+    sister, Nezuko, turned into a demon. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from
+    February 2016 to May 2020, with its chapters collected in twenty-three tankōbon volumes. It has been published in
+    English by Viz Media and simultaneously published by Shueisha on their Manga Plus platform.A twenty-six episode
+    anime television series adaptation produced by Ufotable aired in Japan from April to September 2019. A sequel film,
+    Demon Slayer: Kimetsu no Yaiba The Movie: Mugen Train, was released in October 2020 and became the highest-grossing
+    anime film and Japanese film of all time. A second season of the anime series, readapting the Mugen Train arc seen
+    in the film in seven episodes, and covering the Entertainment District arc from the manga in eleven episodes, aired
+    from October 2021 to February 2022. A third season covering the Swordsmith Village arc has been announced.As of
+    February 2021, the manga had over 150 million copies in circulation, including digital versions, making it the ninth
+    best-selling manga series of all time. Also, it was the best-selling manga in 2019 and 2020. Both the manga and its
+    anime adaptation have received critical acclaim. The anime series has received numerous awards and is considered one
+    of the best anime of the 2010s. In 2020, the Demon Slayer franchise generated an estimated annual sales revenue of
+    ¥1 trillion ($8.75 billion), becoming one of the highest-grossing media franchises of all time.</p>
+
+
+
+
+
+  <div style="height: 245px;width: 1350px;">
+    <div style="height: 245px;width: 1350px;" class="center">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="wrapper"> <h1 style="color: black;">Rengoku</h1></div>
+  <div class="wrapper2"> <h1 style="color: black;">Tanjiro</h1></div>
+
 </body>
+
 </html>
