@@ -1378,6 +1378,12 @@ body{
 
 .videoa2:before {
   content: '';
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: 100%;
+  
+
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
@@ -1947,8 +1953,8 @@ bodY {
             animation-fill-mode: forwards;
   }
 
-  .checkerboard > div:nth-child(even) {
-    background: #2f2f2f;
+  .checkerboard > div:nth-child(even) { 
+    background-color:#1c1919;background-size: 100%;background-repeat: no-repeat;display: flex;flex-wrap: wrap;
   }
 }
 @-webkit-keyframes poof {
@@ -1966,20 +1972,23 @@ bodY {
 .wave {
   width: 50px;
   height: 250px;
-  animation: wave 1.53s linear infinite;
+  animation: wave 5s;
   border-radius: 20px;
 }
-.wave:nth-child(2) {
+.wave:nth-child(1) {
   animation-delay:0.2s;
 }
+.wave:nth-child(2) {
+  animation-delay: 0.4s;
+}
 .wave:nth-child(3) {
-  animation-delay:0.4s;
+  animation-delay:0.6s;
 }
 .wave:nth-child(4) {
   animation-delay:0.6s;
 }
 .wave:nth-child(5) {
-  animation-delay:0.8s;
+  animation-delay: 0.8s;
 }
 .wave:nth-child(6) {
   animation-delay:1s;
@@ -1995,4 +2004,10 @@ bodY {
 }
 .wave:nth-child(10) {
   animation-delay:1.8s;
+}
+.wave:nth-child(11) {
+  animation-delay:2s;
+}
+.wave:nth-child(12) {
+  animation-delay:2.2s;
 }

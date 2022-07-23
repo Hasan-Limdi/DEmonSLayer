@@ -50,12 +50,12 @@
   <style>
     ::-moz-selection {
       color: red;
-      background: rgb(0, 0, 0);
+
     }
 
     ::selection {
       color: red;
-      background: rgb(0, 0, 0);
+
     }
   </style>
 </head>
@@ -102,7 +102,8 @@
 </div>
 
 </div>
-<video width="1080px" poster="" id="vid" loop>
+<video style="display: flex;
+flex-wrap: wrap;" poster="" id="vid" loop>
   <source src="Demon Slayer_ Kimetsu no Yaiba Trailer 1.html.mp4" type="video/mp4" id="vid" />
 </video>
 
@@ -137,7 +138,6 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
   }
 
@@ -149,7 +149,7 @@
 
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: red;
   }
 </style>
 
@@ -226,7 +226,7 @@
 
 <body style="
       text-align: center;
-      background-color: #f5f1f1;
+      background-color: #ddd;
       background-image: url();
       background-repeat: no-repeat;
       display: flex;
@@ -238,7 +238,7 @@
     ">
   <div>
     <h1>
-      <div style="font-size: 60px;color: red;
+      <div style="font-size: 60px;color: red;font-family: 'Brush Script MT', cursive;
         " class="tooltip">
         Tanjiro🌊🔥,
         <span class="tooltiptext">
@@ -248,7 +248,7 @@
             autoplay muted loop controls></video>
         </span>
       </div>
-      <div style="font-size: 60px;color: red" class="tooltip">
+      <div style="font-size: 60px;color: red;font-family: 'Brush Script MT', cursive;" class="tooltip">
         Zenitsu⚡⚡,
         <span class="tooltiptext">
           <video style="transform: translate(-50%, -50%);
@@ -257,7 +257,7 @@
             autoplay muted loop controls></video>
         </span>
       </div>
-      <div style="font-size: 60px;color: red" class="tooltip">
+      <div style="font-size: 60px;color: red;font-family: 'Brush Script MT', cursive;" class="tooltip">
         Inosuke🐗🐗.
         <span class="tooltiptext">
           <video style="transform: translate(-50%, -50%);
@@ -641,43 +641,49 @@
 
   </div>
 
-  <div>
 
-    <button style=" background: black;position: relative; top: 0px;left: 525px;
-        color: rgb(205, 7, 7);height: 55px;width: 150px;text-size-adjust: 43px;" onclick="typeWriter()">
+
+  <div> <button
+      style=" background: black;top: 0px;left: 0px;right: 115px;
+        color:#ddd(205, 7, 7);height: 55px;width: 150px;text-size-adjust: 43px;font-family: 'Brush Script MT', cursive;"
+      onclick="typeWriter()">
       <p style="color:red;"> 鬼滅の刃</p>
-    </button>
-
-    <p style="color: white;" id="demo"></p>
+    </button></div>
 
 
-    <button style=" background: black;font-size: 25px;text-align: center;position: relative;left: 525px;
-        color: rgb(205, 7, 7);height: 450px;width: 640px;text-size-adjust: 43px;" id="hover" class="glow-on-hover"
-      type="button" onclick="myfunction()">
+
+
+  <div> <button
+      style=" background: rgb(252, 248, 248);font-size: 25px;text-align: center;left: 0px;
+        color: rgb(205, 7, 7);height: 450px;width: 640px;text-size-adjust: 43px;font-family: 'Brush Script MT', cursive;"
+      id="hover" class="glow-on-hover" type="button" onclick="myfunction()">
       <h3 style="font-size: 60px;text-align: center;">鬼滅の刃</h3>
     </button>
-    <p style="color: white;" id="hover"></p>
+    <p style="color: white;font-family: 'Brush Script MT', cursive;" id="hover">
 
-    <script style="text-align: center;">
-      var i = 0;
-      var txt = "Demon Slayer Season 3 will start with Tanjiro traveling to the Swordsmith Village to replace his sword because Hotaru Haganezuka is tired of repairing it. He has to explain the smith who made it and how his sword was so badly damaged. While Tanjiro waits for his sword to be repaired, enemies close in."
-      var speed = 35;
+      <script style="text-align: center;font-family: 'Brush Script MT', cursive;">
+        var i = 0;
+        var txt = "Demon Slayer Season 3 will start with Tanjiro traveling to the Swordsmith Village to replace his sword because Hotaru Haganezuka is tired of repairing it. He has to explain the smith who made it and how his sword was so badly damaged. While Tanjiro waits for his sword to be repaired, enemies close in."
+        var speed = 35;
 
-      function typeWriter() {
-        if (i < txt.length) {
-          document.getElementById("hover").innerHTML += txt.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("hover").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
         }
-      }
-    </script>
+      </script>
+    </p>
   </div>
 
-  <hr>
+
+
   <div><video width="1080px" poster="" id="vid" loop controls>
       <source src="DEMON SLAYER SEASON 3 - OFFICIAL TRAILER.mp4" type="video/mp4" id="vid" />
     </video></div>
-  <p style=" font-family: 'Caveat', cursive;font-size: 20px;">Demon Slayer: Kimetsu no Yaiba 鬼滅の刃, Kimetsu no Yaiba,
+  <p style=" font-family: 'Brush Script MT', cursive;font-size: 30px;color: rgb(0, 0, 0);">Demon Slayer: Kimetsu no
+    Yaiba 鬼滅の刃, Kimetsu no Yaiba,
     Blade of Demon Destruction is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows
     teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger
     sister, Nezuko, turned into a demon. It was serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump from
@@ -765,8 +771,8 @@
 
 
   <div><img style="
-  top: 0px;
-  right: 0px;" src="signature.png" alt=""></div>
+
+  left: 150px;" src="signature.png" alt=""></div>
 
 
 
