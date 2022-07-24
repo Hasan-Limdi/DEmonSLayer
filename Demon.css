@@ -48,6 +48,11 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+.cards {
+  width: 20%; 
+}
+
 .cards {
   width: 100%;
   display: flex;
@@ -72,6 +77,8 @@ h3 {
   transform: scale(1.05);
   margin: 2rem;
 }
+
+
 
 .colour {
   position: absolute;
@@ -1440,6 +1447,11 @@ bodY {
   align-items: center;
   
 }
+
+.wave2 {
+  width: 20%; 
+}
+
 .wave2 {
   width: 5px;
   height: 100px;
@@ -1968,6 +1980,9 @@ bodY {
   }
 }
 
+.wave {
+  width: 20%; 
+}
 
 .wave {
   width: 50px;
@@ -2010,4 +2025,33 @@ bodY {
 }
 .wave:nth-child(12) {
   animation-delay:2.2s;
+}
+@media screen and (max-width: 1000px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+
+.vid {
+  width: 20%; 
+}
+
+.Button {
+  width: 20%; 
+}
+
+.Button2 {
+  width: 20%; 
+}
+
+.checkBoard{
+width: 20%;
+}
+
+.CArd {
+  width: 20%; 
+}
+
+.scroll {
+  width: 20%; 
 }
