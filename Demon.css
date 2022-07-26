@@ -1628,78 +1628,8 @@ bodY {
     transform: scale(0);
   }
 }
-.wrapper h1{
 
-  font-size: 110px;
-  color: rgba(255, 255, 255, 0.1); background: url('fire.png') repeat-x;
-  --webkit-background-clip: text; animation: fire 12s linear infinite;
-  
-  }
-  
-  /* Animating the image */
-  
-  @keyframes fire {
 
-  0%{
-  
-  background-position: left ◊ top 10px;
-  
-  }
-  
-  30%{
-  
-  background-position: left 1000px top 0;
-  
-  }
-  
-  70%{
-  
-  background-position: left 2000px top -5px;
-  
-  }
-  
-  100%{
-  
-  background-position: left 3000px top -10px;
-  
-  }
-}
-.wrapper2 h1{
-
-  font-size: 110px;
-  color: rgba(255, 255, 255, 0.1); background: url('51vbbhnnM2L._SX425_-removebg-preview.png') repeat-x;
-  --webkit-background-clip: text; animation: fire 12s linear infinite;
-  
-  }
-  
-  /* Animating the image */
-  
-  @keyframes fire {
-
-  0%{
-  
-  background-position: left ◊ top 10px;
-  
-  }
-  
-  30%{
-  
-  background-position: left 1000px top 0;
-  
-  }
-  
-  70%{
-  
-  background-position: left 2000px top -5px;
-  
-  }
-  
-  100%{
-  
-  background-position: left 3000px top -10px;
-  
-  }
-}
 .checkerboard > div:nth-child(1) {
   -webkit-animation-delay: 6.8571428571s;
           animation-delay: 6.8571428571s;
@@ -1948,11 +1878,12 @@ bodY {
 .checkerboard {
   background-image: url("1042104.jpg");
   background-size: cover;
+  object-fit: cover;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -2026,85 +1957,34 @@ bodY {
 .wave:nth-child(12) {
   animation-delay:2.2s;
 }
-@media screen and (max-width: 1000px) {
-  .left, .main, .right {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-  }
+.fa-instagram {
+  background: #dc04bb;
+  color: white;
+}
+body {
+  width: 100%; height: 100%;
+
+}
+.parent {
+  width: 100%; height: 170px;
+  left: 20%; top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.vid {
-  width: 20%; 
+.parent .scrollBar{
+  height:100%;
+  width:100%;
+  
+  overflow-x: scroll;
 }
 
-.Button {
-  width: 20%; 
-}
-
-.Button2 {
-  width: 20%; 
-}
-
-.checkBoard{
-width: 20%;
-}
-
-.CArd {
-  width: 20%; 
-}
-
-.scroll {
-  width: 20%; 
-}
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 480px) {
-/* Styles */
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen 
-and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen 
-and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen 
-and (min-width : 1824px) {
-/* Styles */
+.child {
+  width: 300px; height: 100%;
+ 
+  
+  display:inline-block;
 }
