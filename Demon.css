@@ -1125,7 +1125,7 @@ a {
   color: rgb(155, 145, 130);
 }
 .muzan {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBLmB1rmX18uIfE7eZT0xvobXb4JJaK-PkCg&usqp=CAU");
+  background-image: url("https://images.alphacoders.com/101/1015202.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1957,10 +1957,7 @@ bodY {
 .wave:nth-child(12) {
   animation-delay:2.2s;
 }
-.fa-instagram {
-  background: #dc04bb;
-  color: white;
-}
+
 body {
   width: 100%; height: 100%;
 
