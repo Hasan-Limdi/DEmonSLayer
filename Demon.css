@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+  
+}
+@media only screen and (max-width: 800px) {
+  
+}
+
 .overlay {
   background-color: #000;
   height: 100vh;
@@ -48,6 +56,11 @@ h3 {
   justify-content: center;
   align-items: center;
 }
+
+.cards {
+  width: 20%; 
+}
+
 .cards {
   width: 100%;
   display: flex;
@@ -72,6 +85,8 @@ h3 {
   transform: scale(1.05);
   margin: 2rem;
 }
+
+
 
 .colour {
   position: absolute;
@@ -1118,7 +1133,7 @@ a {
   color: rgb(155, 145, 130);
 }
 .muzan {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBLmB1rmX18uIfE7eZT0xvobXb4JJaK-PkCg&usqp=CAU");
+  background-image: url("https://images.alphacoders.com/101/1015202.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1235,6 +1250,9 @@ a {
   background: linear-gradient(145deg, #e6e6e6, #ffffff);
   box-shadow: 30px 30px 40px #141313, -30px -30px 40px #1c1919;
   animation: large 0.7s ease-in-out forwards;
+}
+@media only screen and (max-width:800px) {
+  
 }
 @keyframes large {
   100% {
@@ -1378,6 +1396,12 @@ body{
 
 .videoa2:before {
   content: '';
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: 100%;
+  
+
   background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
   position: absolute;
   top: -2px;
@@ -1427,6 +1451,7 @@ bodY {
   padding: 0;
   box-sizing: border-box;
 }
+
 .center {
   height: 100vh;
   display: flex;
@@ -1434,13 +1459,24 @@ bodY {
   align-items: center;
   
 }
+
+.wave2 {
+  width: 20%; @media {
+
+    max-width: 800px;
+    min-width: 180px;
+
+  }
+}
+
 .wave2 {
   width: 5px;
   height: 100px;
-  background: linear-gradient(45deg, rgb(0, 0, 0), rgb(255, 0, 0));
+  background: linear-gradient(60deg, #ff0000, #ff7300,  #48ff00, #002bff, #7a00ff, #ff00c8, #ff0000);
   margin: 10px;
   animation: wave 1s linear infinite;
   border-radius: 20px;
+  
 }
 .wave2:nth-child(2) {
   animation-delay: 0.2s;
@@ -1598,90 +1634,29 @@ bodY {
 .wave2:nth-child(53) {
   animation-delay: 5.3s;
 }
+@media only screen and (max-width:800px) and (min-width:250px) {
+  
+}
 
 @keyframes wave {
   0% {
     transform: scale(0);
   }
+  25% {
+    transform: scale(0.75);
+  }
   50% {
-    transform: scale(1);
+    transform: scale(1.5);
+  }
+  75% {
+    transform:scale(0..75) ;
   }
   100% {
     transform: scale(0);
   }
 }
-.wrapper h1{
 
-  font-size: 110px;
-  color: rgba(255, 255, 255, 0.1); background: url('fire.png') repeat-x;
-  --webkit-background-clip: text; animation: fire 12s linear infinite;
-  
-  }
-  
-  /* Animating the image */
-  
-  @keyframes fire {
 
-  0%{
-  
-  background-position: left ◊ top 10px;
-  
-  }
-  
-  30%{
-  
-  background-position: left 1000px top 0;
-  
-  }
-  
-  70%{
-  
-  background-position: left 2000px top -5px;
-  
-  }
-  
-  100%{
-  
-  background-position: left 3000px top -10px;
-  
-  }
-}
-.wrapper2 h1{
-
-  font-size: 110px;
-  color: rgba(255, 255, 255, 0.1); background: url('51vbbhnnM2L._SX425_-removebg-preview.png') repeat-x;
-  --webkit-background-clip: text; animation: fire 12s linear infinite;
-  
-  }
-  
-  /* Animating the image */
-  
-  @keyframes fire {
-
-  0%{
-  
-  background-position: left ◊ top 10px;
-  
-  }
-  
-  30%{
-  
-  background-position: left 1000px top 0;
-  
-  }
-  
-  70%{
-  
-  background-position: left 2000px top -5px;
-  
-  }
-  
-  100%{
-  
-  background-position: left 3000px top -10px;
-  
-  }
-}
 .checkerboard > div:nth-child(1) {
   -webkit-animation-delay: 6.8571428571s;
           animation-delay: 6.8571428571s;
@@ -1930,11 +1905,12 @@ bodY {
 .checkerboard {
   background-image: url("1042104.jpg");
   background-size: cover;
+  object-fit: cover;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  height: 100vh;
-  width: 100%;
+  height: 50vh;
+  width: 100vw;
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
@@ -1947,8 +1923,8 @@ bodY {
             animation-fill-mode: forwards;
   }
 
-  .checkerboard > div:nth-child(even) {
-    background: #2f2f2f;
+  .checkerboard > div:nth-child(even) { 
+    background-color:#1c1919;background-size: 100%;background-repeat: no-repeat;display: flex;flex-wrap: wrap;
   }
 }
 @-webkit-keyframes poof {
@@ -1962,24 +1938,30 @@ bodY {
   }
 }
 
+.wave {
+  width: 20%; 
+}
 
 .wave {
   width: 50px;
   height: 250px;
-  animation: wave 1.53s linear infinite;
+  animation: wave 5s;
   border-radius: 20px;
 }
-.wave:nth-child(2) {
+.wave:nth-child(1) {
   animation-delay:0.2s;
 }
+.wave:nth-child(2) {
+  animation-delay: 0.4s;
+}
 .wave:nth-child(3) {
-  animation-delay:0.4s;
+  animation-delay:0.6s;
 }
 .wave:nth-child(4) {
   animation-delay:0.6s;
 }
 .wave:nth-child(5) {
-  animation-delay:0.8s;
+  animation-delay: 0.8s;
 }
 .wave:nth-child(6) {
   animation-delay:1s;
@@ -1995,4 +1977,38 @@ bodY {
 }
 .wave:nth-child(10) {
   animation-delay:1.8s;
+}
+.wave:nth-child(11) {
+  animation-delay:2s;
+}
+.wave:nth-child(12) {
+  animation-delay:2.2s;
+}
+
+body {
+  width: 100%; height: 100%;
+
+}
+.parent {
+  width: 100%; height: 170px;
+  left: 20%; top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  
+  
+  white-space: nowrap;
+}
+
+.parent .scrollBar{
+  height:100%;
+  width:100%;
+  
+  overflow-y: hidden;
+}
+
+.child {
+  width: 300px; height: 100%;
+ 
+  
+  display:inline-block;
 }
