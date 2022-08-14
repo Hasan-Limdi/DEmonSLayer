@@ -1448,6 +1448,7 @@ body{
 }
 bodY {
   margin: 0;
+  
   padding: 0;
   box-sizing: border-box;
 }
@@ -1462,6 +1463,7 @@ bodY {
 
 .wave2 {
   width: 20%; @media {
+    
 
     max-width: 800px;
     min-width: 180px;
@@ -2093,7 +2095,7 @@ body {
   align-items: center;
   align-content: center; 
   justify-content: center;  
-  background: linear-gradient(60deg,red,black);
+  background: linear-gradient(60deg,black,red,black);
 	z-index: 100000;
 }
 
